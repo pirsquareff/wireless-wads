@@ -1,5 +1,5 @@
 # Used command
-sudo python probmon.py -i <interface> -f -s -r -l -d ', ' -o <output_filename>
+sudo python probemon.py -i <interface> -f -s -r -l -d ', ' -o <output_filename>
 
 # probemon
 A simple command line tool for monitoring and logging 802.11 probe frames
