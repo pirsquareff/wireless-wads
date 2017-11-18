@@ -13,6 +13,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactMapGL, { NavigationControl } from 'react-map-gl';
 
+import DeviceNode from 'components/DeviceNode';
+
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN;
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -93,25 +95,28 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     const { viewport, mapStyle } = this.state;
     return (
-      <ReactMapGL
-        {...viewport}
-        mapStyle={mapStyle}
-        onViewportChange={this.onViewportChange}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-        ref={(node) => {
-          this.reactMapGL = node;
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            right: 10,
-            top: 10,
+      <div>
+        <ReactMapGL
+          {...viewport}
+          mapStyle={mapStyle}
+          onViewportChange={this.onViewportChange}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          ref={(node) => {
+            this.reactMapGL = node;
           }}
         >
-          <NavigationControl onViewportChange={this.onViewportChange} />
-        </div>
-      </ReactMapGL>
+          <div
+            style={{
+              position: 'absolute',
+              right: 10,
+              top: 10,
+            }}
+          >
+            <NavigationControl onViewportChange={this.onViewportChange} />
+          </div>
+        </ReactMapGL>
+        <DeviceNode />
+      </div>
     );
   }
 }
