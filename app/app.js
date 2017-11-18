@@ -13,7 +13,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import { Connector } from 'mqtt-react';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
 
@@ -57,9 +56,7 @@ const render = (messages) => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <Connector mqttProps="ws://broker.mqttdashboard.com:8000/">
-            <App />
-          </Connector>
+          <App />
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
