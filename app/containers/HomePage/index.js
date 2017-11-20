@@ -11,35 +11,46 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactMapGL, { NavigationControl } from 'react-map-gl';
+import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 
-import DeviceNodeList from 'containers/DeviceNodeList';
+import StationPin from 'components/StationPin';
+// import DeviceNodeList from 'containers/DeviceNodeList';
+import StationObserver from './StationObserver';
+import StationDataService from './stationDataService';
 
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN;
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  state = {
-    mapStyle: 'mapbox://styles/mapbox/dark-v9',
-    viewport: {
-      latitude: 13.7397456,
-      longitude: 100.5321433,
-      zoom: 16.5,
-      bearing: 0,
-      pitch: 60,
-      width: 500,
-      height: 500,
-    },
+export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = {
+      mapStyle: 'mapbox://styles/mapbox/dark-v9',
+      viewport: {
+        latitude: 13.7367456,
+        longitude: 100.5311433,
+        zoom: 17,
+        bearing: 0,
+        pitch: 60,
+        width: 500,
+        height: 500,
+      },
+      stations: new Map(),
+    };
+    this.stationDataService = new StationDataService();
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.resize);
     this.resize();
     this.addBuildingLayer();
+    this.stationObserver = new StationObserver(this.onStationChange);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.resize);
   }
+
+  onStationChange = (stations) => this.setState({ stations });
 
   onViewportChange = (viewport) => this.setState({ viewport });
 
@@ -92,6 +103,24 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     });
   }
 
+  renderStationMarker() {
+    const { stations } = this.state;
+    const stationsArray = Array.from(stations.values());
+    const stationNodes = stationsArray.map((station) => {
+      const stationData = this.stationDataService.getStation(station.fromRaspId);
+      return (
+        <Marker
+          key={`marker-${station.fromRaspId}`}
+          longitude={stationData.longitude}
+          latitude={stationData.latitude}
+        >
+          <StationPin size={20} onClick={() => this.onClickStationPin()} />
+        </Marker>
+      );
+    });
+    return stationNodes;
+  }
+
   render() {
     const { viewport, mapStyle } = this.state;
     return (
@@ -105,6 +134,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             this.reactMapGL = node;
           }}
         >
+          {this.renderStationMarker()}
+
           <div
             style={{
               position: 'absolute',
@@ -115,7 +146,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             <NavigationControl onViewportChange={this.onViewportChange} />
           </div>
         </ReactMapGL>
-        <DeviceNodeList />
       </div>
     );
   }

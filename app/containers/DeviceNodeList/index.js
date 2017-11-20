@@ -9,53 +9,80 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import mqtt from 'mqtt';
+import { Marker } from 'react-map-gl';
 
-import DeviceNode from 'components/DeviceNode';
+import StationPin from 'components/StationPin';
+import StationDataService from './stationDataService';
 
-const host = 'ws://35.198.193.141:8000/mqtt';
+const mqttHost = 'ws://35.198.193.141:8000/mqtt';
+const mqttTopic = 'wads/project/demo';
 
 export class DeviceNodeList extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
+    this.stationDataService = new StationDataService();
     this.state = {
-      messages: [],
+      stations: new Map(),
     };
   }
 
   componentDidMount() {
     console.log('DeviceNodeList:: componentDidMount');
     const that = this;
-    this.client = mqtt.connect(host, {
+    this.client = mqtt.connect(mqttHost, {
       protocolId: 'MQIsdp',
       protocolVersion: 3,
     });
     this.client.on('connect', () => {
       console.log('DeviceNodeList#client:: connected');
-      that.client.subscribe('wads/project/demo');
+      that.client.subscribe(mqttTopic);
     });
     this.client.on('message', (topic, message) => {
-      console.log(message.toString());
-      that.addMessage({
-        key: Date.now(),
-        topic,
-        payload: JSON.parse(message),
-      });
+      if (topic === mqttTopic) {
+        console.log(message.toString());
+        const jsonMessage = JSON.parse(message);
+        that.updateStation({
+          data: jsonMessage,
+        });
+      }
     });
   }
 
-  addMessage(message) {
-    const updated = this.state.messages;
-    updated.push(message);
-    this.setState({ messages: updated });
+  onClickStationPin() {
+    console.log('onClickStationPin');
+  }
+
+  updateStation(station) {
+    const updatedStations = this.state.stations;
+    updatedStations.set(station.data.fromRaspId, station.data);
+    this.setState({ stations: updatedStations });
   }
 
   render() {
-    const deviceNodes = this.state.messages.map((message) =>
-      <DeviceNode key={message.key} message={message} />
-    );
+    const stations = Array.from(this.state.stations.values());
+    const stationNodes = stations.map((station) => {
+      const stationData = this.stationDataService.getStation(station.fromRaspId);
+      return (
+        <Marker
+          key={`marker-${station.fromRaspId}`}
+          longitude={stationData.longitude}
+          latitude={stationData.latitude}
+        >
+          <StationPin size={20} onClick={() => this.onClickStationPin()} />
+        </Marker>
+      );
+    });
     return (
-      <div id="deviceNodeList">
-        <div className="device-nodes">{deviceNodes}</div>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      >
+        {stationNodes}
       </div>
     );
   }
