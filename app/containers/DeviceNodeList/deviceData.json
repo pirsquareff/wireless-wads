@@ -1,0 +1,22 @@
+[{
+    "id": "c8:3a:35:cc:b4:59",
+    "name": "ตึกวิศวกรรมศาสตร์ 3",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+    "latitude": 13.736809,
+    "longitude": 100.533133
+  },
+  {
+    "id": "43:9d:81:d1:e5:b7",
+    "name": "อาคารจามจุรี 9",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+    "latitude": 13.735909,
+    "longitude": 100.525458
+  },
+  {
+    "id": "45:9d:81:d1:e5:b7",
+    "name": "iCanteen (โรงอาหารคณะวิศวฯ)",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+    "latitude": 13.736938,
+    "longitude": 100.534143
+  }
+]
