@@ -1,7 +1,7 @@
 import mqtt from 'mqtt';
 
 const mqttHost = 'ws://35.198.193.141:8000/mqtt';
-const mqttTopic = 'wads/project/demo';
+const mqttTopic = 'wads/project/dev';
 
 export default class StationObserver {
   constructor(onChange) {
@@ -33,7 +33,11 @@ export default class StationObserver {
   }
 
   updateStation(station) {
-    this.stations.set(station.data.fromRaspId, station.data);
+    if (station.data.devices.length === 0) {
+      this.stations.delete(station.data.fromRaspId);
+    } else {
+      this.stations.set(station.data.fromRaspId, station.data);
+    }
     this.onChange(this.stations);
   }
 }

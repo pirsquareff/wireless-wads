@@ -11,12 +11,14 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 
 import StationPin from 'components/StationPin';
-// import DeviceNodeList from 'containers/DeviceNodeList';
 import StationObserver from './StationObserver';
 import StationDataService from './stationDataService';
+
+import './Homepage.scss';
 
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN;
 
@@ -134,7 +136,13 @@ export default class HomePage extends React.Component { // eslint-disable-line r
             this.reactMapGL = node;
           }}
         >
-          {this.renderStationMarker()}
+          <ReactCSSTransitionGroup
+            transitionName="station-pin"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            {this.renderStationMarker()}
+          </ReactCSSTransitionGroup>
 
           <div
             style={{

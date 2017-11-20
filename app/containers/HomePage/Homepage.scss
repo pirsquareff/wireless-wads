@@ -1,0 +1,17 @@
+.station-pin-enter {
+  opacity: 0.01;
+}
+
+.station-pin-enter.station-pin-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.station-pin-leave {
+  opacity: 1;
+}
+
+.station-pin-leave.station-pin-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
