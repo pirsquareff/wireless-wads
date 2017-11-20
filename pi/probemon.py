@@ -10,7 +10,6 @@ from scapy.all import *
 from pprint import pprint
 from logging.handlers import RotatingFileHandler
 
-
 NAME = 'probemon'
 DESCRIPTION = "a command line tool for logging 802.11 probe request frames"
 
@@ -56,7 +55,7 @@ def build_packet_callback(time_fmt, logger, delimiter, mac_info, ssid, rssi):
 			rssi_val = -(256-ord(packet.notdecoded[-4:-3]))
 			fields.append(str(rssi_val))
 
-		logger.info(delimiter.join(fields))
+		logger.info(delimiter.join(fields))		
 
 	return packet_callback
 
