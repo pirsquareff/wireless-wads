@@ -31,7 +31,7 @@ def get_mac():
 
 
 def pub(msg):
-    publish.single("wads/project/dev", msg,
+    publish.single("wads/project/demo", msg,
                    hostname="35.198.193.141", port=28104)
 
 
