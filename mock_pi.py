@@ -131,8 +131,13 @@ station = """
 ]
 
 """
-station = json.loads(station, encoding='thai')
+f = open('./dataStation.json', encoding='thai')
+s = ''
+for l in f:
+    s += l
 
+station = json.loads(s, encoding='thai')
+print(station)
 print(sys.argv)
 if(len(sys.argv) != 4):
     print('pls input max_devices and sleep time and pi_station')
