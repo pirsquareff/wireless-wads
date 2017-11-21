@@ -1,3 +1,4 @@
+# coding: utf-8
 import random
 import time
 import paho.mqtt.publish as publish
