@@ -1,7 +1,7 @@
 import mqtt from 'mqtt';
 
 const mqttHost = 'ws://35.198.193.141:8000/mqtt';
-const mqttTopic = 'wads/project/dev';
+const mqttTopic = 'wads/project/demo';
 
 export default class StationObserver {
   constructor(onChange) {
@@ -11,19 +11,19 @@ export default class StationObserver {
   }
 
   setupMqtt() {
-    console.log('DeviceNodeList:: componentDidMount');
+    // console.log('DeviceNodeList:: componentDidMount');
     const that = this;
     this.client = mqtt.connect(mqttHost, {
       protocolId: 'MQIsdp',
       protocolVersion: 3,
     });
     this.client.on('connect', () => {
-      console.log('DeviceNodeList#client:: connected');
+      // console.log('DeviceNodeList#client:: connected');
       that.client.subscribe(mqttTopic);
     });
     this.client.on('message', (topic, message) => {
       if (topic === mqttTopic) {
-        console.log(message.toString());
+        // console.log(message.toString());
         const jsonMessage = JSON.parse(message);
         that.updateStation({
           data: jsonMessage,
@@ -38,6 +38,8 @@ export default class StationObserver {
     } else {
       this.stations.set(station.data.fromRaspId, station.data);
     }
+    // console.log((this.stations)[index]);
+    // console.log(this.stations.station.data.fromRaspId);
     this.onChange(this.stations);
   }
 }

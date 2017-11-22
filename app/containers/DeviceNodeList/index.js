@@ -27,19 +27,19 @@ export class DeviceNodeList extends React.Component { // eslint-disable-line rea
   }
 
   componentDidMount() {
-    console.log('DeviceNodeList:: componentDidMount');
+    // console.log('DeviceNodeList:: componentDidMount');
     const that = this;
     this.client = mqtt.connect(mqttHost, {
       protocolId: 'MQIsdp',
       protocolVersion: 3,
     });
     this.client.on('connect', () => {
-      console.log('DeviceNodeList#client:: connected');
+      // console.log('DeviceNodeList#client:: connected');
       that.client.subscribe(mqttTopic);
     });
     this.client.on('message', (topic, message) => {
       if (topic === mqttTopic) {
-        console.log(message.toString());
+        // console.log(message.toString());
         const jsonMessage = JSON.parse(message);
         that.updateStation({
           data: jsonMessage,
@@ -49,7 +49,7 @@ export class DeviceNodeList extends React.Component { // eslint-disable-line rea
   }
 
   onClickStationPin() {
-    console.log('onClickStationPin');
+    // console.log('onClickStationPin');
   }
 
   updateStation(station) {

@@ -116,10 +116,40 @@ export default class HomePage extends React.Component { // eslint-disable-line r
           longitude={stationData.longitude}
           latitude={stationData.latitude}
         >
-          <StationPin size={20} onClick={() => this.onClickStationPin()} />
+          <StationPin size={20} fill={'#d00'} onClick={() => this.onClickStationPin()} />
         </Marker>
       );
     });
+    return stationNodes;
+  }
+
+  renderDeviceMarker() {
+    const { stations } = this.state;
+    const stationsArray = Array.from(stations.values());
+
+    const stationNodes = stationsArray.map((station) => {
+      const stationData = this.stationDataService.getStation(station.fromRaspId);
+      const devicesArray = station.devices;
+
+      const deviceNode = devicesArray.map((device) => {
+        const r = device.distance;
+        const zeta = parseInt((device.id).replace(/\D/g, ''), 10);
+        const longtitudePlus = r * Math.sin(zeta);
+        const latitudePlus = r * Math.cos(zeta);
+        return (
+          <Marker
+            key={`devise-${device.id}`}
+            longitude={stationData.longitude + (longtitudePlus / 100000)}
+            latitude={stationData.latitude + (latitudePlus / 100000)}
+          >
+            <StationPin size={10} fill={'#fff'} onClick={() => this.onClickStationPin()} />
+          </Marker>
+        );
+      });
+
+      return deviceNode;
+    });
+
     return stationNodes;
   }
 
@@ -142,6 +172,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
             transitionLeaveTimeout={300}
           >
             {this.renderStationMarker()}
+            {this.renderDeviceMarker()}
           </ReactCSSTransitionGroup>
 
           <div
@@ -163,3 +194,7 @@ HomePage.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
 };
+
+
+// 13.736908, 100.533843
+// 13.736833, 100.533832

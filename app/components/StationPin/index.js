@@ -22,6 +22,7 @@ class StationPin extends React.PureComponent { // eslint-disable-line react/pref
     const {
       size = 20,
       onClick,
+      fill,
     } = this.props;
 
     return (
@@ -30,6 +31,7 @@ class StationPin extends React.PureComponent { // eslint-disable-line react/pref
         viewBox="0 0 24 24"
         style={{
           ...pinStyle,
+          fill: `${fill}`,
           transform: `translate(${-size / 2}px,${-size}px)`,
         }}
         onClick={onClick}
@@ -42,6 +44,7 @@ class StationPin extends React.PureComponent { // eslint-disable-line react/pref
 
 StationPin.propTypes = {
   size: PropTypes.number,
+  fill: PropTypes.string,
   onClick: PropTypes.func,
 };
 
