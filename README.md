@@ -4,6 +4,8 @@
 
 > A team project&#39;s repository as part of 2110481 Wireless Computer Networks course 2017/1
 
+<img src="./wads-demo.gif" />
+
 ## Table of Contents
 - [Developing](#developing)
 - [React Boilerplate's Documentation](#react-boilerplates-documentation)
