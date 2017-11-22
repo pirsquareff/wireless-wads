@@ -12,8 +12,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 
+import StationInfo from 'components/StationInfo';
 import StationPin from 'components/StationPin';
 import StationObserver from './StationObserver';
 import StationDataService from './stationDataService';
@@ -37,6 +38,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
         height: 500,
       },
       stations: new Map(),
+      popupInfo: null,
     };
     this.stationDataService = new StationDataService();
   }
@@ -105,6 +107,22 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     });
   }
 
+  renderPopup() {
+    const { popupInfo } = this.state;
+
+    return popupInfo && (
+      <Popup
+        tipSize={5}
+        anchor="top"
+        longitude={popupInfo.longitude}
+        latitude={popupInfo.latitude}
+        onClose={() => this.setState({ popupInfo: null })}
+      >
+        <StationInfo info={popupInfo} />
+      </Popup>
+    );
+  }
+
   renderStationMarker() {
     const { stations } = this.state;
     const stationsArray = Array.from(stations.values());
@@ -116,7 +134,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
           longitude={stationData.longitude}
           latitude={stationData.latitude}
         >
-          <StationPin size={20} fill={'#d00'} onClick={() => this.onClickStationPin()} />
+          <StationPin size={20} fill={'#d00'} onClick={() => this.setState({ popupInfo: stationData })} />
         </Marker>
       );
     });
@@ -172,6 +190,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
             transitionLeaveTimeout={300}
           >
             {this.renderStationMarker()}
+            {this.renderPopup()}
             {this.renderDeviceMarker()}
           </ReactCSSTransitionGroup>
 
