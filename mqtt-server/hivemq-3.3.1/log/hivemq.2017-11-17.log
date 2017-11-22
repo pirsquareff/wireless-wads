@@ -1,0 +1,181 @@
+2017-11-17 15:35:29,898 INFO  - Starting HiveMQ Server
+2017-11-17 15:35:29,906 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:35:29,906 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:35:29,931 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:35:30,799 INFO  - Created user preferences directory.
+2017-11-17 15:35:37,593 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:35:37,593 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:35:37,638 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:35:37,647 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:35:37,648 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:35:38,155 INFO  - Started webinterface in 507ms
+2017-11-17 15:35:38,173 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2017-11-17 15:35:38,212 ERROR - Could not start TCP Listener on port 1883 and address 0.0.0.0. Is it already in use?
+2017-11-17 15:35:38,213 ERROR - Could not bind any listener. Stopping HiveMQ.
+2017-11-17 15:35:38,220 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 15:39:32,346 INFO  - Starting HiveMQ Server
+2017-11-17 15:39:32,353 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:39:32,353 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:39:32,370 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:39:38,832 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:39:38,833 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:39:38,878 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:39:38,888 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:39:38,888 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:39:39,411 INFO  - Started webinterface in 523ms
+2017-11-17 15:39:39,428 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2017-11-17 15:39:39,474 ERROR - Could not start TCP Listener on port 1883 and address 0.0.0.0. Is it already in use?
+2017-11-17 15:39:39,474 ERROR - Could not bind any listener. Stopping HiveMQ.
+2017-11-17 15:39:39,484 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 15:40:43,736 INFO  - Starting HiveMQ Server
+2017-11-17 15:40:43,743 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:40:43,743 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:40:43,761 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:40:50,070 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:40:50,071 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:40:50,118 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:40:50,120 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:40:50,127 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:40:50,618 INFO  - Started webinterface in 491ms
+2017-11-17 15:40:50,636 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2017-11-17 15:40:50,684 ERROR - Could not start TCP Listener on port 1883 and address 0.0.0.0. Is it already in use?
+2017-11-17 15:40:50,685 ERROR - Could not bind any listener. Stopping HiveMQ.
+2017-11-17 15:40:50,691 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 15:42:48,055 INFO  - Starting HiveMQ Server
+2017-11-17 15:42:48,062 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:42:48,062 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:42:48,079 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:42:55,629 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:42:55,629 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:42:55,685 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:42:55,688 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:42:55,688 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:42:56,236 INFO  - Started webinterface in 548ms
+2017-11-17 15:42:56,251 INFO  - Starting TCP listener on address 127.0.0.1 and port 28104
+2017-11-17 15:42:56,303 INFO  - Started TCP Listener on address 127.0.0.1 and on port 28104
+2017-11-17 15:42:56,303 INFO  - Started HiveMQ in 8253ms
+2017-11-17 15:42:56,305 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 15:46:02,274 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 15:52:47,105 INFO  - Starting HiveMQ Server
+2017-11-17 15:52:47,113 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:52:47,113 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:52:47,129 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:52:53,986 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:52:53,986 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:52:54,048 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:52:54,049 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:52:54,049 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:52:54,639 INFO  - Started webinterface in 590ms
+2017-11-17 15:52:54,656 INFO  - Starting TCP listener on address 0.0.0.0 and port 28104
+2017-11-17 15:52:54,712 INFO  - Started TCP Listener on address 0.0.0.0 and on port 28104
+2017-11-17 15:52:54,713 INFO  - Started HiveMQ in 7613ms
+2017-11-17 15:52:54,715 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 15:56:33,807 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 15:59:14,997 INFO  - Starting HiveMQ Server
+2017-11-17 15:59:15,004 INFO  - HiveMQ version: 3.3.1
+2017-11-17 15:59:15,004 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 15:59:15,022 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 15:59:21,269 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 15:59:21,270 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 15:59:21,317 INFO  - JMX Metrics Reporting started.
+2017-11-17 15:59:21,322 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 15:59:21,327 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 15:59:21,823 INFO  - Started webinterface in 496ms
+2017-11-17 15:59:21,836 INFO  - Starting TCP listener on address 127.0.0.1 and port 28104
+2017-11-17 15:59:21,886 INFO  - Started TCP Listener on address 127.0.0.1 and on port 28104
+2017-11-17 15:59:21,887 INFO  - Started HiveMQ in 6895ms
+2017-11-17 15:59:21,889 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 16:02:24,172 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 16:23:09,950 INFO  - Starting HiveMQ Server
+2017-11-17 16:23:10,018 INFO  - HiveMQ version: 3.3.1
+2017-11-17 16:23:10,018 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 16:23:10,175 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 16:23:22,159 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 16:23:22,160 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 16:23:22,221 INFO  - JMX Metrics Reporting started.
+2017-11-17 16:23:22,225 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 16:23:22,231 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 16:23:23,544 INFO  - Started webinterface in 1313ms
+2017-11-17 16:23:23,561 INFO  - Starting TCP listener on address 127.0.0.1 and port 28104
+2017-11-17 16:23:23,650 INFO  - Started TCP Listener on address 127.0.0.1 and on port 28104
+2017-11-17 16:23:23,652 INFO  - Started HiveMQ in 13760ms
+2017-11-17 16:23:23,678 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 16:25:56,099 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 16:31:06,811 INFO  - Starting HiveMQ Server
+2017-11-17 16:31:06,929 INFO  - HiveMQ version: 3.3.1
+2017-11-17 16:31:06,929 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 16:31:07,034 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 16:31:20,108 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 16:31:20,108 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 16:31:20,175 INFO  - JMX Metrics Reporting started.
+2017-11-17 16:31:20,184 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 16:31:20,185 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 16:31:21,440 INFO  - Started webinterface in 1255ms
+2017-11-17 16:31:21,465 INFO  - Starting TCP listener on address 127.0.0.1 and port 28104
+2017-11-17 16:31:21,642 INFO  - Started TCP Listener on address 127.0.0.1 and on port 28104
+2017-11-17 16:31:21,644 INFO  - Started HiveMQ in 14919ms
+2017-11-17 16:31:21,662 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 16:32:37,299 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 16:34:18,789 INFO  - Starting HiveMQ Server
+2017-11-17 16:34:18,796 INFO  - HiveMQ version: 3.3.1
+2017-11-17 16:34:18,796 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 16:34:18,815 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 16:34:27,028 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 16:34:27,029 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 16:34:27,098 INFO  - JMX Metrics Reporting started.
+2017-11-17 16:34:27,102 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 16:34:27,104 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 16:34:27,750 INFO  - Started webinterface in 646ms
+2017-11-17 16:34:27,770 INFO  - Starting TCP listener on address 127.0.0.1 and port 28104
+2017-11-17 16:34:27,835 INFO  - Started TCP Listener on address 127.0.0.1 and on port 28104
+2017-11-17 16:34:27,836 INFO  - Started HiveMQ in 9052ms
+2017-11-17 16:34:27,838 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 16:35:27,486 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 16:39:39,396 INFO  - Starting HiveMQ Server
+2017-11-17 16:39:39,472 INFO  - HiveMQ version: 3.3.1
+2017-11-17 16:39:39,472 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 16:39:39,599 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 16:39:51,451 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 16:39:51,452 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 16:39:51,525 INFO  - JMX Metrics Reporting started.
+2017-11-17 16:39:51,528 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 16:39:51,529 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 16:39:52,703 INFO  - Started webinterface in 1174ms
+2017-11-17 16:39:52,722 INFO  - Starting TCP listener on address 0.0.0.0 and port 28104
+2017-11-17 16:39:52,819 INFO  - Started TCP Listener on address 0.0.0.0 and on port 28104
+2017-11-17 16:39:52,821 INFO  - Started HiveMQ in 13483ms
+2017-11-17 16:39:52,841 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 17:02:24,384 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 17:02:33,227 INFO  - Starting HiveMQ Server
+2017-11-17 17:02:33,234 INFO  - HiveMQ version: 3.3.1
+2017-11-17 17:02:33,234 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 17:02:33,253 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 17:02:40,141 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 17:02:40,142 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 17:02:40,183 INFO  - JMX Metrics Reporting started.
+2017-11-17 17:02:40,187 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 17:02:40,187 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 17:02:40,669 INFO  - Started webinterface in 482ms
+2017-11-17 17:02:40,689 INFO  - Starting TCP listener on address 0.0.0.0 and port 28104
+2017-11-17 17:02:40,734 INFO  - Starting Websocket listener on address 0.0.0.0 and port 8000
+2017-11-17 17:02:40,739 INFO  - Started TCP Listener on address 0.0.0.0 and on port 28104
+2017-11-17 17:02:40,741 INFO  - Started Websocket Listener on address 0.0.0.0 and on port 8000
+2017-11-17 17:02:40,742 INFO  - Started HiveMQ in 7520ms
+2017-11-17 17:02:40,743 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
+2017-11-17 17:40:29,074 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2017-11-17 17:42:33,728 INFO  - Starting HiveMQ Server
+2017-11-17 17:42:33,735 INFO  - HiveMQ version: 3.3.1
+2017-11-17 17:42:33,735 INFO  - HiveMQ home directory: /home/liao_kawin/hivemq-3.3.1
+2017-11-17 17:42:33,752 INFO  - Log Configuration was overridden by /home/liao_kawin/hivemq-3.3.1/conf/logback.xml
+2017-11-17 17:42:40,546 INFO  - Loaded Plugin HiveMQ JVM Metrics Plugin - v3.1.0
+2017-11-17 17:42:40,546 INFO  - Loaded Plugin HiveMQ JMX Metrics Reporting Plugin - v3.0.0
+2017-11-17 17:42:40,592 INFO  - JMX Metrics Reporting started.
+2017-11-17 17:42:40,596 INFO  - No user for web interface configured. Starting with default user
+2017-11-17 17:42:40,596 INFO  - Starting webinterface on address 127.0.0.1 and port 8080
+2017-11-17 17:42:41,113 INFO  - Started webinterface in 517ms
+2017-11-17 17:42:41,126 INFO  - Starting TCP listener on address 0.0.0.0 and port 28104
+2017-11-17 17:42:41,166 INFO  - Starting Websocket listener on address 0.0.0.0 and port 8000
+2017-11-17 17:42:41,177 INFO  - Started TCP Listener on address 0.0.0.0 and on port 28104
+2017-11-17 17:42:41,178 INFO  - Started Websocket Listener on address 0.0.0.0 and on port 8000
+2017-11-17 17:42:41,180 INFO  - Started HiveMQ in 7457ms
+2017-11-17 17:42:41,182 INFO  - No valid license file found. Using evaluation license, restricted to 25 connections.
