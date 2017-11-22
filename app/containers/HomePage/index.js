@@ -213,7 +213,3 @@ HomePage.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
 };
-
-
-// 13.736908, 100.533843
-// 13.736833, 100.533832

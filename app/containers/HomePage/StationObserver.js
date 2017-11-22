@@ -38,8 +38,6 @@ export default class StationObserver {
     } else {
       this.stations.set(station.data.fromRaspId, station.data);
     }
-    // console.log((this.stations)[index]);
-    // console.log(this.stations.station.data.fromRaspId);
     this.onChange(this.stations);
   }
 }
